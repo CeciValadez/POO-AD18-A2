@@ -53,9 +53,9 @@
 
 (-4,0) Problemas con la integración de archivos
 
-(-6) Los personajes no están estructurados en clases
+(-6) Los personajes no están estructurados en objetos
 
-(-2) El flujo de pantallas esta estructurado en  clases
+(-2) El flujo de pantallas no está estructurado en objetos
 
 (-1, 1) La lógica del juego implementa los objetos
 
