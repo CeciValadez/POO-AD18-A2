@@ -1,0 +1,52 @@
+//utilizando el arreglo pixels[] p5
+
+//declaro mi objeto PImage, este almacena en la memoria la representación de los pixeles
+//de la imagen
+PImage imagen;
+
+void setup(){
+  size(970,450);
+  //inicializo el objeto con la función loadImage(), pasando el nombre del archivo
+  //almacenado en /data
+  imagen = loadImage("gato.jpg");
+  //este atributo almacena el ancho en pixeles de la imagen
+  println(imagen.width);
+  //este atributo almacena el alto en pixeles de la imagen
+  println(imagen.height);
+  //pixels[], almacena la información de color de cada pixel, en este caso el segundo
+  println(imagen.pixels[2]);
+}
+
+void draw(){
+  background(255);
+  // itero por dor for loops para recuperar la información de color de cada 20 pixeles
+  for (int i = 0; i <imagen.width; i+=20){
+    for (int j = 0; j <imagen.height; j+=20){
+      
+      //almaceno el color del pixel i,j
+      int c = imagen.get(i,j);    
+      //lo paso como parámetro de color par dibujar geometría
+      fill(c);
+      noStroke();
+      
+      //con rects
+      //rect(i,j,20,20);
+      
+      //con elipses, utilizando la saturación del verde para dictar el tamaño
+      //float satV = green(c);
+      //float t = map(satV,0,255,5,30);
+      //ellipse(i,j,t,t);
+      
+      //con lineas aleatorias
+      //stroke(c);
+      //strokeWeight(random(1,30));
+      //line(i,j,i+random(-100,100),j+random(-100,100));
+      
+      //con tipografía aleatoria
+      //textSize(60);
+      //text(char(ceil(random(65,127))),i,j);
+      
+      
+    }
+  }
+}
